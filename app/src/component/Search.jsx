@@ -7,7 +7,7 @@ import UserNav from './UserNav';
 
 function Search()
 {
-    if("false"===localStorage.getItem("login"))
+    if(false==localStorage.getItem("login"))
     {
     return(
         <>

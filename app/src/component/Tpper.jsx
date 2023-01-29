@@ -4,6 +4,7 @@ import {Redirect} from 'react-router-dom';
 import {useNavigate} from 'react-router-dom';
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import welcome from '../imag/snake.gif';
 
 function Tpper()
 {
@@ -53,7 +54,8 @@ console.log(empemail)
       navigate("/delete")
     }
     return(
-        <div class="d-flex  ">
+      <div class="d-flex flex-column justify-content-between ">
+        <div class="d-flex" style={{width:"100vw"}} >
         
       
 
@@ -62,12 +64,12 @@ console.log(empemail)
 
 
 
-<div  class="d-flex flex-row w-50">
-      <div class="w-50">
-      <img src={`http://localhost:5000/${empphoto}`} class="card-img-top" alt="..." style={{  height:"300px", weidth:"500px" }}></img>
+<div  class="d-flex flex-row justify-content-between w-50">
+      <div class=" border-0  mr-5" >
+      <img src={`http://localhost:5000/${empphoto}`} class="card-img-top rounded-circle  " style={{width:"260px" ,height:"260px", border: '7px solid 	#C0C0C0',  boxShadow:" 3px 4px #888888",objectFit: "cover"}} alt="..."></img>
       </div>
-        <div class="card  w-50  border-0">
-  <div class="card-header d-flex  justify-content-center " style={{ color: "red", fontWeight:"bolder" }}>
+        <div class="card  w-50 ml-3 border-0">
+  <div class="card-header d-flex  justify-content-center  " style={{ color: "red", fontWeight:"bolder" }}>
    WELCOME !!
   </div>
   <ul class="list-group list-group-flush d-flex       justify-content-center">
@@ -88,7 +90,17 @@ console.log(empemail)
 <button type="button" class="btn btn-secondary btn-lg btn-block"onClick={handle}>DELETE YOUR PLACE</button>
 </div>
 
+
+
+
 </div>
+
+<div class="mt-3"style={{height:"300px" , weidth:"100px"  , backgroundColor:"white", backgroundImage: `url(${welcome})`}}>
+ 
+</div>
+</div>
+
+
 
 
         
